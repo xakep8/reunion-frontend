@@ -12,7 +12,7 @@ import Dashboard from "../pages/dashboard";
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <Navigate to="/tasks/all" replace /> },
+  { path: "/", element: <Navigate to="/dashboard" replace /> },
   {
     path: "/notfound",
     element: <Notfound />,
@@ -20,10 +20,6 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <Notfound />,
-  },
-  {
-    path: "/signin",
-    element: <Signin />,
   },
   {
     path: "/signin",
@@ -38,26 +34,16 @@ const router = createBrowserRouter([
     element: <Logout />,
   },
   {
-    path: "/dashboard",
-    element: (
-      <ProtectedRoute>
-        <AccountLayout>
-          <Dashboard/>
-        </AccountLayout>
-      </ProtectedRoute>
-    ),
-  },
-  {
-    path: "tasks",
+    path: "/",
     element: (
       <ProtectedRoute>
         <AccountLayout />
       </ProtectedRoute>
     ),
     children: [
-      { index: true, element: <Navigate to="/tasks/all" replace /> },
+      { index: true, element: <Navigate to="/dashboard" replace /> },
       {
-        path: "all",
+        path: "tasks",
         element: <ProjectDetails />,
       },
       {
@@ -69,6 +55,10 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <TaskDetails /> },
         ],
+      },
+      {
+        path:"dashboard",
+        element: <Dashboard />,
       }
     ],
   },

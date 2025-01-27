@@ -5,7 +5,6 @@ import { Link, useLocation } from "react-router-dom"
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 
 const userNavigation = [
-  { name: 'Profile', href: '#' },
   { name: 'Sign out', href: '/logout' },
 ]
 
@@ -17,7 +16,7 @@ const Appbar = () => {
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', current: false },
-    { name: 'Tasklist', href: '/tasks/all', current: false },
+    { name: 'Tasklist', href: '/tasks', current: false },
   ]
 
   return (

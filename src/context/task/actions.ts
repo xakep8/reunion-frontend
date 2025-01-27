@@ -58,6 +58,11 @@ export const refreshTasks = async (
     );
 
     if (!response.ok) {
+      if (response.status === 401) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("userData");
+        window.location.reload();
+      }
       throw new Error("Failed to fetch tasks");
     }
 

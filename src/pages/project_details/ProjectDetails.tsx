@@ -20,7 +20,7 @@ const ProjectDetails = () => {
   return (
     <>
       <div className="flex justify-between">
-        <Link to={`/tasks/new`}>
+        <Link to={`/new`}>
           <button
             id="newTaskBtn"
             className="rounded-md bg-blue-600 px-4 py-2 m-2 text-sm font-medium text-white hover:bg-opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"

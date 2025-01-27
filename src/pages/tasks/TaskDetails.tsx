@@ -59,7 +59,7 @@ const TaskDetails = () => {
 
   const closeModal = () => {
     setIsOpen(false);
-    navigate("../all");
+    navigate("/tasks");
   };
 
   const onSubmit: SubmitHandler<TaskFormUpdatePayload> = (data) => {

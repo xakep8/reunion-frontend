@@ -1,6 +1,7 @@
 import React from "react";
 // Import the file
 import SignupForm from "./SignupForm";
+import { Link } from "react-router-dom";
 
 const Signup: React.FC = () => {
   // And use it after the h2 tag
@@ -11,6 +12,12 @@ const Signup: React.FC = () => {
           Sign up
         </h1>
         <SignupForm />
+        <p className="text-center text-white mt-4">
+          Already have an account?{" "}
+          <Link to="/signin">
+            Sign in
+          </Link>
+        </p>
       </div>
     </div>
   );

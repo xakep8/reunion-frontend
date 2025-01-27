@@ -19,10 +19,10 @@ const Task = forwardRef<
     <div ref={ref} {...props} className="m-2 flex">
       <Link
         className="TaskItem w-full shadow-md border border-slate-100 bg-gray-700"
-        to={`/tasks/${task.id}`}
+        to={`/${task.id}`}
       >
-        <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-          <div>
+        <div className="sm:flex sm:w-full sm:justify-end">
+          <div className="p-4 w-full">
             <h2 className="text-base font-bold my-1">{task.title}</h2>
             <p className="text-sm text-white">
               {new Date(task.startDate).toDateString()}
